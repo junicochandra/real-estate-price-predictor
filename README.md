@@ -18,7 +18,7 @@ real-estate-price-predictor/
 │── app/
 │ │
 │ ├── adapters/ # Outermost layer: connection to the outside world (API, CLI, etc.)
-│ │ ├── controllers/ # Connecting requests to use cases
+│ │ ├── handlers/ # Handle incoming requests and delegate them to use cases
 │ │ └── routers/ # Routing
 │ │
 │ ├── core/ # Config & utilities global
