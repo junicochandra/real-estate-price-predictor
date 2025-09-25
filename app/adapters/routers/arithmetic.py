@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.controllers import arithmetic_controller as controller
+from app.adapters.controllers import arithmetic_controller as controller
 
 router = APIRouter(prefix="/arithmetic", tags=["Arithmetic"])
 

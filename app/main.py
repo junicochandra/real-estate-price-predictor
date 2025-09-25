@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Depends
-from app.routers import arithmetic
+from app.adapters.routers import arithmetic
 from pydantic import BaseModel, Field
 
 app = FastAPI(root_path="/real-estate")

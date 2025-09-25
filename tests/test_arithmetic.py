@@ -1,4 +1,4 @@
-from app.controllers import arithmetic_controller as controller
+from app.adapters.controllers import arithmetic_controller as controller
 from fastapi.testclient import TestClient
 from app.main import app
 
