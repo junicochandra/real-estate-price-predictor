@@ -34,26 +34,25 @@ real-estate-price-predictor/
 
 ## Quick Start
 
-### 1. Clone the Docker starter pack
+Follow these steps to set up and run the project in your local environment:
+
+### 1. Clone and Rebuild the Docker starter pack
 
 ```bash
 git clone https://github.com/junicochandra/docker-starterpack.git
+
 cd docker-starterpack
-```
 
-### 2. Rebuild and start Docker environment
-
-```bash
 ./rebuild
 ```
 
-### 3. Clone the Python project inside the workspace
+### 2. Clone the Python project inside the workspace
 
 ```bash
 git clone https://github.com/junicochandra/real-estate-price-predictor.git
 ```
 
-### 4. Access the application in your browser
+### 3. Access the application in your browser
 
 http://localhost:8080/real-estate/docs
 
@@ -61,6 +60,8 @@ http://localhost:8080/real-estate/docs
 
 ```bash
 cd docker-starterpack
+
 docker-compose exec -it real-estate-price bash
+
 pytest -v
 ```
