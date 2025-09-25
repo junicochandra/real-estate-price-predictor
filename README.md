@@ -16,20 +16,31 @@ This project is designed with **clean architecture**, tested with **pytest**, an
 ```bash
 real-estate-price-predictor/
 │── app/
-│ ├── main.py # Entry point of the application
-│ ├── controllers/ # Request handlers / business logic
-│ │ └── arithmetic_controller.py
-│ ├── routers/ # API routes (modular)
-│ │ └── arithmetic_router.py
-│ └── models/ # Pydantic models for validation
+│ │
+│ ├── adapters/ # Outermost layer: connection to the outside world (API, CLI, etc.)
+│ │ ├── controllers/ # Connecting requests to use cases
+│ │ └── routers/ # Routing
+│ │
+│ ├── core/ # Config & utilities global
+│ │
+│ ├── domain/ # Application core layer (business rules)
+│ │ ├── entities/ # Entity definition (e.g. House, User, etc.)
+│ │ └── interfaces/ # Abstraction / contract (e.g. repository interface)
+│ │
+│ ├── infrastructure/ # Technical implementation (database, external API, etc.)
+│ │ └── repositories/ # Implementation repository (MySQL, PostgreSQL, etc.)
+│ │
+│ ├── usecases/ # Application logic / specific business rules
+│ │
+│ └── main.py # FastAPI entry point
 │
-│── tests/
-│ └── test_arithmetic.py # Unit tests with pytest
+│── tests/ # Unit tests
 │
-│── requirements.txt # Dependencies
-│── Dockerfile # Docker setup
-│── docker-compose.yml # Optional docker-compose config
-│── README.md # Project documentation
+│── .gitignore
+│── Dockerfile
+│── pytest.ini
+│── README.md
+│── requirements.txt
 ```
 
 ## Quick Start
