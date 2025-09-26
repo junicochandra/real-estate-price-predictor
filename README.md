@@ -30,6 +30,8 @@ real-estate-price-predictor/
 │ ├── infrastructure/ # Technical implementation (database, external API, etc.)
 │ │ └── repositories/ # Implementation repository (MySQL, PostgreSQL, etc.)
 │ │
+│ ├── services/ # Shared business logic layer, grouping related operations
+│ │
 │ ├── usecases/ # Application logic / specific business rules
 │ │
 │ └── main.py # FastAPI entry point

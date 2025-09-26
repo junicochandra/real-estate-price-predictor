@@ -1,4 +1,6 @@
-from app.domain.interfaces.house_interface import HouseRepositoryInterface
+from app.domain.interfaces.house_repository_interface import (
+    HouseRepositoryInterface,
+)
 
 
 class PredictPriceUseCase:
