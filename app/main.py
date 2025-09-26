@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Depends
-from app.adapters.routers import arithmetic_router
 from pydantic import BaseModel, Field
+from app.adapters.routers import arithmetic_router
+from app.adapters.routers import house_router
 
 app = FastAPI(root_path="/real-estate")
 
@@ -26,3 +27,4 @@ def say_goodbye(user: User = Depends()):
 
 
 app.include_router(arithmetic_router.router)
+app.include_router(house_router.router)
