@@ -4,3 +4,7 @@ sqlalchemy
 pydantic
 pytest
 httpx
+python-dotenv
+pandas
+scikit-learn
+joblib
